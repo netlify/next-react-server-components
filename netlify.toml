@@ -1,0 +1,10 @@
+[[plugins]]
+package = "./local-plugin/index.ts"
+
+[[plugins]]
+package = "@netlify-labs/plugin-edge-handlers-test"
+
+[[redirects]]
+from = "/_next/static/*"
+to = "/static/:splat"
+status = 200
