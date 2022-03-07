@@ -5,6 +5,20 @@ import { resolve, join, dirname } from 'path'
 import { emptyDir, ensureDir, readJson, writeJson } from 'fs-extra'
 import { getHandler } from './runtime'
 
+export interface HandlerManifest {
+  version: 1
+  edge_handlers: Array<
+    | {
+        handler: string
+        path: string
+      }
+    | {
+        handler: string
+        pattern: string
+      }
+  >
+}
+
 const loadMiddlewareManifest = async (
   netlifyConfig: NetlifyConfig
 ): Promise<MiddlewareManifest | null> => {
@@ -19,9 +33,15 @@ const loadMiddlewareManifest = async (
   return readJson(middlewarePath)
 }
 
+/**
+ * Convert the Next middleware name into a valid Edge Handler name
+ */
 const sanitizeName = (name: string) =>
   `next${name === '/' ? '_index' : name.replace('/', '_')}`
 
+/**
+ * Initialization added to the top of the handler bundle
+ */
 const bootstrap = /* js */ `
   globalThis._ENTRIES ||= {}
   // We shadow the global because of packages that check for the existence of window to know if they're in the browser
@@ -33,6 +53,9 @@ const getEnv = () => /* js */ `
 let process = { env: {} }
 `
 
+/**
+ * Concatenates the Next edge handler code with the required chunks and adds an export
+ */
 const getMiddlewareBundle = async ({
   middlewareDefinition,
   netlifyConfig,
@@ -61,20 +84,6 @@ const getMiddlewareBundle = async ({
   return chunks.join('\n')
 }
 
-interface HandlerManifest {
-  version: 1
-  edge_handlers: Array<
-    | {
-        handler: string
-        path: string
-      }
-    | {
-        handler: string
-        pattern: string
-      }
-  >
-}
-
 const copySourceFile = ({
   file,
   handlerDir,
@@ -83,6 +92,9 @@ const copySourceFile = ({
   handlerDir: string
 }) => fs.copyFile(join(__dirname, 'templates', file), join(handlerDir, file))
 
+/**
+ * Writes Edge Handlers for the Next middleware
+ */
 export const writeMiddleware = async (netlifyConfig: NetlifyConfig) => {
   const middlewareManifest = await loadMiddlewareManifest(netlifyConfig)
   if (!middlewareManifest) {
