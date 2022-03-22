@@ -12,8 +12,9 @@
     "react-dom": "18.0.0-rc.0"
   },
   "devDependencies": {
-    "@netlify-labs/cli-internal": "^1.0.11",
-    "@netlify-labs/plugin-edge-handlers-test": "^1.0.3",
+    "@netlify-labs/cli-internal": "^1.0.17",
+    "@netlify-labs/plugin-edge-handlers-test": "^2.1.1",
+    "@netlify-labs/plugin-next-edge": "^0.0.2",
     "@netlify/build": "^26.3.14",
     "@netlify/functions": "^1.0.0",
     "@types/fs-extra": "^9.0.13",

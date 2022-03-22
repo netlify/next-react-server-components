@@ -1,5 +1,9 @@
+[build]
+command = "next build"
+base = "."
+
 [[plugins]]
-package = "./local-plugin/index.ts"
+package = "@netlify-labs/plugin-next-edge"
 
 [[plugins]]
 package = "@netlify-labs/plugin-edge-handlers-test"
