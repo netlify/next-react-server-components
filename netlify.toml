@@ -1,6 +1,10 @@
 [build]
 command = "next build"
 base = "."
+publish = ".next"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
 
 [[plugins]]
 package = "@netlify-labs/plugin-next-edge"
