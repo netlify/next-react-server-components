@@ -1,6 +1,6 @@
 # Next.js 12 React Server Components Demo (Alpha)
 
-Try the demo live here: [**next-rsc-hn.vercel.app**](https://next-rsc-hn.vercel.app).
+Try the demo live here: https://next-edge-demo.netlify.app/.
 
 ## Introduction
 
