@@ -7,7 +7,8 @@ import useData from '../lib/use-data'
 import Skeletons from './skeletons'
 
 function ItemPageWithData({ id }) {  
-  const story = useData(`item/${id}`, () => getItem(id))
+  const { data: story } = useData(`item/${id}`, () => getItem(id))
+  if (!story) return <Skeletons count={3} />
   return (
     <Item story={story} />
   )

@@ -8,12 +8,12 @@ import Skeletons from './skeletons'
 
 function Comments({ story }) {
   if (!story) return <div className="loading">No Comments</div>
-  const comments = useData(`comments/${story.id}`, () => getComments(story.comments))
+  const { data: comments } = useData(`comments/${story.id}`, () => getComments(story.comments))
   return (
     <div className="comments">
-      {comments.map((comment) => 
+      {(comments || []).map((comment) => (
         <Comment key={comment.id} {...comment} />
-      )}
+      ))}
     </div>
   )
 }
@@ -21,7 +21,7 @@ function Comments({ story }) {
 export default function Item({ story }) {
   return (
     <div className="item">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style jsx>{`
         .item {
           padding: 10px 29px;
         }
@@ -39,19 +39,21 @@ export default function Item({ story }) {
             padding: 8px 0px;
           }
         }
-      `}} />
+      `}</style>
       <Story {...story} />
 
       <div className="form">
         <CommentForm />
       </div>
 
-      <Suspense fallback={
-        <div>
-          {`Loading comments...`}
-          <Skeletons count={3} />
-        </div>
-      }>
+      <Suspense
+        fallback={
+          <div>
+            {`Loading comments...`}
+            <Skeletons count={3} />
+          </div>
+        }
+      >
         <Comments story={story} />
       </Suspense>
     </div>
