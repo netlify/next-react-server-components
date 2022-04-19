@@ -6,12 +6,6 @@ publish = ".next"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-package = "@netlify-labs/plugin-next-edge"
-
-[[plugins]]
-package = "@netlify-labs/plugin-edge-handlers-test"
-
 [[redirects]]
 from = "/_next/static/*"
 to = "/static/:splat"
