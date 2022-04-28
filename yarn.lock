@@ -1012,10 +1012,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@netlify/build@^26.3.14":
-  version "26.3.14"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.3.14.tgz#94590417e6e481757353e9aa48464433765b3863"
-  integrity sha512-xuDNJqklYa9+8tl04qhQcgrt/JFD7pUH+wlLPvn4Ur8p/ZI/Mvs6A06gob0r2CKR+7HczimDrb3LwKZKXVsgvw==
+"@netlify/build@^26.5.3":
+  version "26.5.3"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-26.5.3.tgz#68f8ea15ba48cd0ecdbe239462ae6cecfd57c5cd"
+  integrity sha512-O16lFUI6/uooWIvgrO/fQphx4vAGTW9GDAQ3hvo5M64XFdu+9W/OU0fB0fAPAJp+wGM+/hZI5JSS6rCG+TWifg==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
@@ -1023,7 +1023,7 @@
     "@netlify/functions-utils" "^4.0.0"
     "@netlify/git-utils" "^4.0.0"
     "@netlify/plugin-edge-handlers" "^3.0.7"
-    "@netlify/plugins-list" "^6.15.0"
+    "@netlify/plugins-list" "^6.19.0"
     "@netlify/run-utils" "^4.0.0"
     "@netlify/zip-it-and-ship-it" "5.9.0"
     "@sindresorhus/slugify" "^2.0.0"
@@ -1219,10 +1219,10 @@
     slash "^3.0.0"
     tiny-glob "^0.2.9"
 
-"@netlify/plugins-list@^6.15.0":
-  version "6.16.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.16.0.tgz#9a7b917af5a741f5145ed1bf480bffec895468b6"
-  integrity sha512-wfPmtfHW7WY6oivVfkHY6yo2hiMjvsP97/vKIn+mzpjmua+nCC3aIfbU+JJGnH8HwKq7UAbC2bwLNQhvQdYsuQ==
+"@netlify/plugins-list@^6.19.0":
+  version "6.19.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.19.0.tgz#6618803445e5ad7f7f1fadb576cf7783160102b9"
+  integrity sha512-EuRZgOhP7QE0H5Sn4+LvsOKL+rcUn+ny6dzwK1V+Rj2HV0cBW2JMGxWj2IEAI1Qb0xU/Gy+Ib+bX23dCvm5LdQ==
 
 "@netlify/run-utils@^4.0.0":
   version "4.0.1"
