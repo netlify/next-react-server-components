@@ -13,7 +13,7 @@
   "devDependencies": {
     "@netlify/build": "^26.5.3",
     "@netlify/functions": "^1.0.0",
-    "@netlify/plugin-nextjs": "^4.9.2",
+    "@netlify/plugin-nextjs": "^4.9.3",
     "@types/fs-extra": "^9.0.13",
     "fs-extra": "^10.0.1"
   }
