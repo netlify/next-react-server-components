@@ -140,14 +140,14 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@netlify/build@^27.3.1":
-  version "27.3.1"
-  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.3.1.tgz#39b0f909f59a40ba4695a9bd6ffe1586f68319ec"
-  integrity sha512-7b1/mgZKRK4mDxA0GsaUHX/8bkzKSm1YufedOyZquq13WxMubrBqY55jsBBblT2SOd+PQgTq+/Nb/tgx12nU0Q==
+"@netlify/build@^27.3.2":
+  version "27.3.2"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-27.3.2.tgz#61923458199f82eeb829c27c2b0ddf2875f770ed"
+  integrity sha512-QoaRwx+qt7582mXSZP0s3YCsK2/xUOsEfhx2Q3PvYKKdVDGjx5MROMuCdc480e8KPWsTTUheB2+A5RuB9dpcLQ==
   dependencies:
     "@bugsnag/js" "^7.0.0"
     "@netlify/cache-utils" "^4.0.0"
-    "@netlify/config" "^18.1.0"
+    "@netlify/config" "^18.1.1"
     "@netlify/edge-bundler" "^1.4.1"
     "@netlify/functions-utils" "^4.2.0"
     "@netlify/git-utils" "^4.0.0"
@@ -214,10 +214,10 @@
     path-exists "^5.0.0"
     readdirp "^3.4.0"
 
-"@netlify/config@^18.1.0":
-  version "18.1.0"
-  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-18.1.0.tgz#4e328b8b667cdb47c2fac5dfc1c90a4e86ca245d"
-  integrity sha512-l5CpXb3qM2fmduu3VnrlBNBZ1Xtwm0+ZLZCIUkDa3GFe3X2LLXN2TEttHP/KFSQg7LmRRYX154ReYcpH0QJNpA==
+"@netlify/config@^18.1.1":
+  version "18.1.1"
+  resolved "https://registry.yarnpkg.com/@netlify/config/-/config-18.1.1.tgz#c5c5aad3154ba40ec67acb1a8aca1d5089de71ff"
+  integrity sha512-w3rIWV72anBCnAb69rCTnuwkLHhZUgZPf9Gsr0Y5AIf/sWJ7cbxwo9cAewgfqVt7ZOFniiQD5ePOaZOawGdn8A==
   dependencies:
     chalk "^5.0.0"
     cron-parser "^4.1.0"
