@@ -1,10 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["local>netlify/renovate-config"],
+  "enabled": false,
   "packageRules": [
     {
-      "excludePackagePrefixes": ["@netlify/"],
-      "enabled": false
+      "matchPackagePrefixes": ["@netlify/"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "enabled": true
     }
   ]
 }
